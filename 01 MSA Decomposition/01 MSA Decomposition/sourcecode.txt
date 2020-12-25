@@ -1,0 +1,452 @@
+1-1
+	@GetMapping("/followee")
+	public ResultDto getFolloweeList(@RequestParam Long userId, @RequestParam String userIds) {
+		String[] idArray = userIds.split(",");
+		List<Long> userIdList = new ArrayList<>();
+		for(String id : idArray) {
+			userIdList.add(Long.valueOf(id));
+		}
+		
+		List<Follow> followList = followService.getFolloweeList(userId, userIdList);
+		
+		return new ResultDto(200, "OK", followList);
+	}
+	
+1-2
+	http://localhost:8080/followee?userId=61&userIds=68,65,57
+	
+1-3
+	@RestController
+	public class FeedController {
+
+		@Autowired
+		FeedService feedService;
+		
+		@PostMapping("/feed")
+		public ResultDto addFeeds(@RequestBody FeedRequestDto dto) {
+			feedService.addFeeds(dto.getUserId(), dto.getPostId());
+			
+			return new ResultDto(200, "OK", "Success");
+		}
+	}
+	
+1-4
+	public class FeedRequestDto {
+		private Long userId;
+		private Long postId;
+
+		public Long getUserId() {
+			return userId;
+		}
+
+		public void setUserId(Long userId) {
+			this.userId = userId;
+		}
+
+		public Long getPostId() {
+			return postId;
+		}
+
+		public void setPostId(Long postId) {
+			this.postId = postId;
+		}
+
+	}
+
+1-5
+	@GetMapping("/feed")
+	public ResultDto getFeeds(@RequestParam Long userId) {
+		List<Feed> feedList = feedService.getFeedList(userId);
+		
+		return new ResultDto(200, "OK", feedList);
+	}
+	
+1-7
+	@Repository
+	public class FeedRestRepository {
+
+		@Autowired
+		RestTemplate restTemplate;
+
+		public List<Feed> getFeedList(Long userId) {
+			FeedResponseDto response = restTemplate
+					.getForEntity("http://localhost:8080/feed?userId={userId}", FeedResponseDto.class, userId).getBody();
+
+			List<FeedData> feedDataList = response.getData();
+			List<Feed> feedList = new ArrayList<>();
+			for (FeedData data : feedDataList) {
+				feedList.add(new Feed(data.getUserId(), data.getFolloweeId(), data.getPostId()));
+			}
+
+			return feedList;
+		}
+	}
+	
+1-8
+	public class FeedResponseDto {
+		private Integer code;
+		private String message;
+		private List<FeedData> data;
+
+		public FeedResponseDto() {
+			super();
+		}
+
+		public FeedResponseDto(Integer code, String message, List<FeedData> data) {
+			super();
+			this.code = code;
+			this.message = message;
+			this.data = data;
+		}
+
+		public Integer getCode() {
+			return code;
+		}
+
+		public void setCode(Integer code) {
+			this.code = code;
+		}
+
+		public String getMessage() {
+			return message;
+		}
+
+		public void setMessage(String message) {
+			this.message = message;
+		}
+
+		public List<FeedData> getData() {
+			return data;
+		}
+
+		public void setData(List<FeedData> data) {
+			this.data = data;
+		}
+
+	}
+	
+1-9
+	public class FeedData {
+		private Long userId;
+		private Long followeeId;
+		private Long postId;
+
+		public FeedData() {
+			super();
+		}
+
+		public FeedData(Long userId, Long followeeId, Long postId) {
+			super();
+			this.userId = userId;
+			this.followeeId = followeeId;
+			this.postId = postId;
+		}
+
+		public Long getUserId() {
+			return userId;
+		}
+
+		public void setUserId(Long userId) {
+			this.userId = userId;
+		}
+
+		public Long getFolloweeId() {
+			return followeeId;
+		}
+
+		public void setFolloweeId(Long followeeId) {
+			this.followeeId = followeeId;
+		}
+
+		public Long getPostId() {
+			return postId;
+		}
+
+		public void setPostId(Long postId) {
+			this.postId = postId;
+		}
+
+	}
+	
+1-10
+	@Bean
+	public RestTemplate getRestTemplate() {
+		return new RestTemplate();
+	}
+	
+1-11
+	public void addFeeds(Long userId, Long postId) {
+		HttpHeaders headers = new HttpHeaders();
+		headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+		
+		FeedRequestDto requestDto = new FeedRequestDto(userId, postId);
+		
+		HttpEntity<FeedRequestDto> entity = new HttpEntity<FeedRequestDto>(requestDto, headers);
+
+		restTemplate.exchange("http://localhost:8080/feed", HttpMethod.POST, entity, String.class);
+	}
+	
+1-12
+	public class FeedRequestDto {
+		private Long userId;
+		private Long postId;
+
+		public FeedRequestDto() {
+			super();
+			// TODO Auto-generated constructor stub
+		}
+
+		public FeedRequestDto(Long userId, Long postId) {
+			super();
+			this.userId = userId;
+			this.postId = postId;
+		}
+
+		public Long getUserId() {
+			return userId;
+		}
+
+		public void setUserId(Long userId) {
+			this.userId = userId;
+		}
+
+		public Long getPostId() {
+			return postId;
+		}
+
+		public void setPostId(Long postId) {
+			this.postId = postId;
+		}
+
+	}
+	
+1-14
+	@Repository
+	public class FollowRestRepository {
+
+		@Autowired
+		RestTemplate restTemplate;
+		
+		public List<Follow> getFolloweeList(Long userId, List<Long> userIdList) {
+			StringBuilder idStr = new StringBuilder();
+			for(Long id : userIdList) {
+				idStr = idStr.length() > 0 ? idStr.append(",").append(id) : idStr.append(id);
+			}
+			
+			FollowResponseDto response = restTemplate.getForEntity("http://localhost:8080/followee?userId={userId}&userIds={userIds}", 
+					FollowResponseDto.class, userId, idStr.toString()).getBody();
+			
+			List<FollowData> followDataList = response.getData();
+			List<Follow> followList = new ArrayList<>();
+			for(FollowData data : followDataList) {
+				followList.add(new Follow(data.getFolloweeId(), data.getFollowerId()));
+			}
+			
+			return followList;
+		}
+
+	}
+	
+1-15
+	public class FollowResponseDto {
+		private Integer code;
+		private String message;
+		private List<FollowData> data;
+
+		public FollowResponseDto() {
+			super();
+			// TODO Auto-generated constructor stub
+		}
+
+		public FollowResponseDto(Integer code, String message, List<FollowData> data) {
+			super();
+			this.code = code;
+			this.message = message;
+			this.data = data;
+		}
+
+		public Integer getCode() {
+			return code;
+		}
+
+		public void setCode(Integer code) {
+			this.code = code;
+		}
+
+		public String getMessage() {
+			return message;
+		}
+
+		public void setMessage(String message) {
+			this.message = message;
+		}
+
+		public List<FollowData> getData() {
+			return data;
+		}
+
+		public void setData(List<FollowData> data) {
+			this.data = data;
+		}
+
+	}
+
+1-16
+	public class FollowData {
+		private Long followeeId;
+		private Long followerId;
+
+		public FollowData() {
+			super();
+			// TODO Auto-generated constructor stub
+		}
+
+		public FollowData(Long followeeId, Long followerId) {
+			super();
+			this.followeeId = followeeId;
+			this.followerId = followerId;
+		}
+
+		public Long getFolloweeId() {
+			return followeeId;
+		}
+
+		public void setFolloweeId(Long followeeId) {
+			this.followeeId = followeeId;
+		}
+
+		public Long getFollowerId() {
+			return followerId;
+		}
+
+		public void setFollowerId(Long followerId) {
+			this.followerId = followerId;
+		}
+
+	}
+	
+1-17
+	@GetMapping("/auth")
+	public ResultDto getAuthToken(@RequestParam String token) {
+		AuthToken authToken = authService.getAuthToken(token);
+		
+		return new ResultDto(200, "OK", authToken);
+	}
+	
+1-18
+	public interface AuthTokenRestRepository {
+	
+		public AuthToken getAuthToken(String token);
+		
+	}
+
+1-19
+	@Repository
+	public class AuthTokenRestRepository {
+
+		@Autowired
+		RestTemplate restTemplate; 
+		
+		public AuthToken getAuthToken(String token) {
+			ResponseDto<AuthTokenData> response = restTemplate.
+					exchange("http://localhost:8080/auth?token={token}", 
+					HttpMethod.GET, null, 
+					new ParameterizedTypeReference<ResponseDto<AuthTokenData>>() {}, token).getBody();
+			
+			AuthTokenData authTokenData = response.getData();
+			AuthToken authToken = new AuthToken(authTokenData.getToken(), authTokenData.getUserId());
+			
+			return authToken;
+		}
+
+	}
+
+1-20
+	public class ResponseDto<T> {
+		private Integer code;
+		private String message;
+		private T data;
+
+		public ResponseDto() {
+			super();
+		}
+
+		public ResponseDto(Integer code, String message, T data) {
+			super();
+			this.code = code;
+			this.message = message;
+			this.data = data;
+		}
+
+		public Integer getCode() {
+			return code;
+		}
+
+		public void setCode(Integer code) {
+			this.code = code;
+		}
+
+		public String getMessage() {
+			return message;
+		}
+
+		public void setMessage(String message) {
+			this.message = message;
+		}
+
+		public T getData() {
+			return data;
+		}
+
+		public void setData(T data) {
+			this.data = data;
+		}
+
+	}
+
+1-21
+	public class AuthTokenData {
+		private String token;
+		private Long userId;
+
+		public AuthTokenData() {
+			super();
+		}
+
+		public AuthTokenData(String token, Long userId) {
+			super();
+			this.token = token;
+			this.userId = userId;
+		}
+
+		public String getToken() {
+			return token;
+		}
+
+		public void setToken(String token) {
+			this.token = token;
+		}
+
+		public Long getUserId() {
+			return userId;
+		}
+
+		public void setUserId(Long userId) {
+			this.userId = userId;
+		}
+
+	}
+
+1-22
+server.port=8081
+
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://microservice.db.iwinv.net:3306/microservice?serverTimezone=UTC
+spring.datasource.username=microservice
+spring.datasource.password=asdqwe123#
+
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQLDialect
+spring.jpa.properties.hibernate.show_sql=true
+spring.jpa.properties.hibernate.format_sql = true
+spring.jpa.properties.hibernate.id.new_generator_mappings=false
+
