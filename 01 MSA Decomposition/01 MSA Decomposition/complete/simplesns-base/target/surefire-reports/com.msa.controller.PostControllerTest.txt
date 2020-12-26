@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.msa.controller.PostControllerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.808 s <<< FAILURE! - in com.msa.controller.PostControllerTest
+addPost  Time elapsed: 0.041 s  <<< FAILURE!
+java.lang.AssertionError: No value at JSON path "$.data.title"
+	at com.msa.controller.PostControllerTest.addPost(PostControllerTest.java:46)
+Caused by: com.jayway.jsonpath.PathNotFoundException: Expected to find an object with property ['title'] in path $['data'] but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'.
+	at com.msa.controller.PostControllerTest.addPost(PostControllerTest.java:46)
+

@@ -4,15 +4,23 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://microservice.db.iwinv.net:3306/microservice?serverTimezone=UTC
-    username: microservice
-    password: EK'[KD#*2AHR-c_E
-  jpa:    properties:      hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
+    #url: jdbc:mysql://microservice.db.iwinv.net:3306/microservice?serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/microservice?serverTimezone=UTC
+    username: root
+    password: root
+    #username: microservice
+    #password: EK'[KD#*2AHR-c_E
+  jpa:
+    properties:
+      hibernate:
+        #dialect: org.hibernate.dialect.MySQLDialect
+        dialect: org.hibernate.dialect.MariaDBDialect
         show_sql: true
         format_sql: true
         id.new_generator_mappings: false
-  freemarker:    template-loader-path:    - classpath:/templates/
+  freemarker:
+    template-loader-path:
+    - classpath:/templates/
     suffix: .ftl
     content-type: text/html
     charset: UTF-8
