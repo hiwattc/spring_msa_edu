@@ -7204,3 +7204,381 @@ org.eclipse.core.runtime.CoreException: Launch configuration PostControllerTest 
 
 !ENTRY org.eclipse.lsp4e 1 0 2020-12-26 23:32:44.519
 !MESSAGE [Info]	ESLint server running in node v12.16.1
+!SESSION 2020-12-27 12:56:49.868 -----------------------------------------------
+eclipse.buildId=4.9.0.202012132054
+java.version=15.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2020-12-27 12:56:55.631
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-12-27 12:56:55.631
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1e288c76,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@738ed8f5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 12:57:02.855
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 12:57:02.860
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@1c57a111[org.springframework.tooling.boot.ls:1.24.0.202012131915(id=578)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 12:57:02.871
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 12:57:02.976
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 12:57:06.824
+!MESSAGE Boot LS startup time from start to initialized: 3945ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 12:57:06.898
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.RhohEFGbisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 12:57:06.915
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 12:57:06.921
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 12:57:06.925
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 12:57:06.929
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 12:57:06.933
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.RhohEFGb => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 12:57:06.960
+!MESSAGE classpath=103 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 12:57:06.969
+!MESSAGE buffering callback sts4.classpath.RhohEFGb simplesns false 103
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 12:57:06.974
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 12:57:06.982
+!MESSAGE classpath=92 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 12:57:06.987
+!MESSAGE buffering callback sts4.classpath.RhohEFGb simplesns-social false 92
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 12:57:06.990
+!MESSAGE executing callback sts4.classpath.RhohEFGb 2 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 12:57:07.017
+!MESSAGE executing callback sts4.classpath.RhohEFGb SUCCESS [done]
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-12-27 12:57:07.583
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\hiwatt'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2020-12-27 13:12:40.372
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:12:48.688
+!MESSAGE exists = false open = true => deleted = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:12:48.692
+!MESSAGE buffering callback sts4.classpath.RhohEFGb simplesns true 0
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:12:48.695
+!MESSAGE exists = false open = true => deleted = true
+
+!ENTRY org.eclipse.core.resources 4 2 2020-12-27 13:12:48.700
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.net.URI.toString()" because the return value of "org.eclipse.core.resources.IProject.getLocationURI()" is null
+	at org.eclipse.lsp4e.LSPEclipseUtils.toWorkspaceFolder(LSPEclipseUtils.java:790)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$10(LanguageServerWrapper.java:497)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.eclipse.lsp4e.LanguageServerWrapper.toWorkspaceFolderEvent(LanguageServerWrapper.java:491)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$0(LanguageServerWrapper.java:169)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380)
+	at org.eclipse.core.internal.resources.Workspace.checkpoint(Workspace.java:575)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.lambda$0(PerformChangeOperation.java:263)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:295)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:94)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:12:48.705
+!MESSAGE buffering callback sts4.classpath.RhohEFGb simplesns-social true 0
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:12:48.710
+!MESSAGE executing callback sts4.classpath.RhohEFGb 2 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:12:48.718
+!MESSAGE executing callback sts4.classpath.RhohEFGb SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2020-12-27 13:12:49.768
+!MESSAGE Launch configuration PostControllerTest references non-existing project simplesns.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration PostControllerTest references non-existing project simplesns.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1843)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1718)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:55)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:40)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:225)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setDirty(LaunchConfigurationWorkingCopy.java:521)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setAttribute(LaunchConfigurationWorkingCopy.java:409)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:401)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:427)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:72)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:824)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:990)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:84)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 107 2020-12-27 13:12:49.769
+!MESSAGE Launch configuration PostControllerTest references non-existing project simplesns.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2020-12-27 13:12:49.774
+!MESSAGE Launch configuration PostControllerTest references non-existing project simplesns.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration PostControllerTest references non-existing project simplesns.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1843)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1718)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:55)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:40)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:225)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setDirty(LaunchConfigurationWorkingCopy.java:521)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setAttribute(LaunchConfigurationWorkingCopy.java:409)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:402)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:427)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:72)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:824)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:990)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:84)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 107 2020-12-27 13:12:49.774
+!MESSAGE Launch configuration PostControllerTest references non-existing project simplesns.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2020-12-27 13:12:49.784
+!MESSAGE Launch configuration PostControllerTest references non-existing project simplesns.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Launch configuration PostControllerTest references non-existing project simplesns.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1843)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1718)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:55)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:40)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:225)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationChanged(LaunchManager.java:2132)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.writeNewFile(LaunchConfigurationWorkingCopy.java:374)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave0(LaunchConfigurationWorkingCopy.java:257)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:227)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:185)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:403)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:427)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:72)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:824)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:990)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:84)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.launching 4 107 2020-12-27 13:12:49.784
+!MESSAGE Launch configuration PostControllerTest references non-existing project simplesns.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:31.162
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:31.169
+!MESSAGE classpath=6 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:31.174
+!MESSAGE buffering callback sts4.classpath.RhohEFGb eureka-server false 6
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:31.178
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:31.184
+!MESSAGE classpath=6 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:31.188
+!MESSAGE buffering callback sts4.classpath.RhohEFGb simplesns-baseservice false 6
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:31.193
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:31.197
+!MESSAGE classpath=6 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:31.202
+!MESSAGE buffering callback sts4.classpath.RhohEFGb simplesns-socialservice false 6
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:31.206
+!MESSAGE executing callback sts4.classpath.RhohEFGb 3 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:31.233
+!MESSAGE executing callback sts4.classpath.RhohEFGb SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:39.600
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:39.611
+!MESSAGE classpath=167 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:39.621
+!MESSAGE buffering callback sts4.classpath.RhohEFGb eureka-server false 167
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:39.626
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:39.636
+!MESSAGE classpath=178 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:39.647
+!MESSAGE buffering callback sts4.classpath.RhohEFGb simplesns-baseservice false 178
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:39.651
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:39.661
+!MESSAGE classpath=180 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:39.672
+!MESSAGE buffering callback sts4.classpath.RhohEFGb simplesns-socialservice false 180
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:39.678
+!MESSAGE executing callback sts4.classpath.RhohEFGb 3 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:39.694
+!MESSAGE executing callback sts4.classpath.RhohEFGb SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:40.085
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:40.096
+!MESSAGE classpath=167 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:40.104
+!MESSAGE buffering callback sts4.classpath.RhohEFGb eureka-server false 167
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:40.108
+!MESSAGE executing callback sts4.classpath.RhohEFGb 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 13:13:40.117
+!MESSAGE executing callback sts4.classpath.RhohEFGb SUCCESS [done]
+
+!ENTRY org.eclipse.jface 2 0 2020-12-27 13:16:06.420
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-12-27 13:16:06.420
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@e425d41,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@73e3e7da,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.lsp4e 1 0 2020-12-27 13:59:28.139
+!MESSAGE [Info]	ESLint server running in node v12.16.1
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 23:13:19.706
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 23:13:19.737
+!MESSAGE classpath=180 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 23:13:19.747
+!MESSAGE buffering callback sts4.classpath.RhohEFGb simplesns-socialservice2 false 180
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 23:13:19.752
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 23:13:19.755
+!MESSAGE classpath=6 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 23:13:19.761
+!MESSAGE buffering callback sts4.classpath.RhohEFGb simplesns-socialservice3 false 6
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 23:13:19.765
+!MESSAGE executing callback sts4.classpath.RhohEFGb 2 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 23:13:19.817
+!MESSAGE executing callback sts4.classpath.RhohEFGb SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 23:13:21.055
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 23:13:21.063
+!MESSAGE classpath=180 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 23:13:21.072
+!MESSAGE buffering callback sts4.classpath.RhohEFGb simplesns-socialservice2 false 180
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 23:13:21.077
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 23:13:21.086
+!MESSAGE classpath=180 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 23:13:21.095
+!MESSAGE buffering callback sts4.classpath.RhohEFGb simplesns-socialservice3 false 180
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 23:13:21.098
+!MESSAGE executing callback sts4.classpath.RhohEFGb 2 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-12-27 23:13:21.271
+!MESSAGE executing callback sts4.classpath.RhohEFGb SUCCESS [done]

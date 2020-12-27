@@ -2,6 +2,10 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="F:\SPRING_MSA_EDU\workspace\02 Service Discovery\02 Service Discovery\complete"/>
+			<item value="F:\SPRING_MSA_EDU\workspace\01 MSA Decomposition\01 MSA Decomposition\complete"/>
+			<item value="F:\SPRING_MSA_EDU\workspace\01 MSA Decomposition\01 MSA Decomposition\start\simplesns-monolithic"/>
+			<item value="F:\SPRING_MSA_EDU\workspace\01 MSA Decomposition\01 MSA Decomposition"/>
 			<item value="F:\SPRING_MSA_EDU\workspace"/>
 			<item value="F:\SPRING_MSA_EDU\workspace\simplesns-monolithic"/>
 		</list>

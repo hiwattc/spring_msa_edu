@@ -1,0 +1,43 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: socialservice
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #url: jdbc:mysql://microservice.db.iwinv.net:3306/microservice?serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/microservice?serverTimezone=UTC
+    #username: microservice
+    #password: EK'[KD#*2AHR-c_E
+    username: root
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        #dialect: org.hibernate.dialect.MySQLDialect
+        dialect: org.hibernate.dialect.MariaDBDialect
+        show_sql: true
+        format_sql: true
+        id.new_generator_mappings: false
+  freemarker:
+    template-loader-path:
+    - classpath:/templates/
+    suffix: .ftl
+    content-type: text/html
+    charset: UTF-8
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      default-zone: http://localhost:8761/eureka/
