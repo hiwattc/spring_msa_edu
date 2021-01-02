@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.msa.domain.Follow;
 import com.msa.repository.FollowRepository;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @Service
 public class FollowServiceImpl implements FollowService {
@@ -17,6 +18,7 @@ public class FollowServiceImpl implements FollowService {
 	FollowRepository followRepository;
 	
 	@Override
+	@HystrixCommand
 	public Follow addFollow(Long followeeId, Long followerId) {
 		
 		Follow follow = new Follow(followeeId, followerId);
@@ -27,6 +29,7 @@ public class FollowServiceImpl implements FollowService {
 	}
 
 	@Override
+	@HystrixCommand
 	public List<Follow> getFollowerList(Long followeeId) {
 
 		List<Follow> followList = followRepository.findByFolloweeId(followeeId);
@@ -42,6 +45,7 @@ public class FollowServiceImpl implements FollowService {
 	}
 
 	@Override
+	@HystrixCommand
 	public List<Follow> getFolloweeList(Long followerId, List<Long> userIdList) {
 		List<Follow> followList = followRepository.findByFollowerIdAndFolloweeIdIn(followerId, userIdList);
 		

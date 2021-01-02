@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.msa.domain.Feed;
 import com.msa.domain.Follow;
 import com.msa.repository.FeedRepository;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @Service
 public class FeedServiceImpl implements FeedService {
@@ -20,6 +21,7 @@ public class FeedServiceImpl implements FeedService {
 	FeedRepository feedRepository;
 
 	@Override
+	@HystrixCommand
 	public void addFeeds(Long followeeId, Long postId) {
 		Feed feed = new Feed(followeeId, followeeId, postId);
 		feedRepository.save(feed);
@@ -35,6 +37,7 @@ public class FeedServiceImpl implements FeedService {
 	}
 
 	@Override
+	@HystrixCommand
 	public List<Feed> getFeedList(Long userId) {
 		List<Feed> feedList = feedRepository.findByUserId(userId);
 		return feedList;

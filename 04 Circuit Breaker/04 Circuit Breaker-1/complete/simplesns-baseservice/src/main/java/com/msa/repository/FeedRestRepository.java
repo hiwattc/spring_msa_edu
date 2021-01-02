@@ -36,6 +36,13 @@ public class FeedRestRepository {
 		fallbackMethod = "getFeedListFallback"
 	)
 	public List<Feed> getFeedList(Long userId) {
+		logger.info("getFeedList!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		logger.info("getFeedList!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		logger.info("getFeedList!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		logger.info("getFeedList!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		logger.info("getFeedList!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		logger.info("getFeedList!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		
 		FeedResponseDto response = restTemplate
 				.getForEntity("http://socialservice/feed?userId={userId}", FeedResponseDto.class, userId).getBody();
 

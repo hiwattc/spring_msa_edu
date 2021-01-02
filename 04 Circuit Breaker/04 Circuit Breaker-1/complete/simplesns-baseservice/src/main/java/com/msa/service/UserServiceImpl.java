@@ -30,6 +30,8 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	FollowRestRepository followRestRepository;
 	
+	@Override
+	@HystrixCommand
 	public User addUser(String username, String password) {
 		User user = new User(username, password);
 		User result = userRepository.saveAndFlush(user);
@@ -83,6 +85,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
+	@HystrixCommand
 	public User getUserByToken(String token) {
 		User user = null;
 		

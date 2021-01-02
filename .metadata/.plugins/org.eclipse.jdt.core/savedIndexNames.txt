@@ -1,20 +1,2 @@
 INDEX VERSION 1.131+F:\SPRING_MSA_EDU\workspace\.metadata\.plugins\org.eclipse.jdt.core
-680048014.index
-3660759201.index
-1354599896.index
-2137222746.index
-2927088573.index
-372568917.index
-1698827149.index
-3097631306.index
-1694233795.index
-3462489346.index
-765404411.index
-468854136.index
-3824477564.index
-2422011488.index
-2150266015.index
-222345189.index
-2684932486.index
-999436409.index
-1408363075.index
+4019888150.index

@@ -35,6 +35,7 @@ public class PostServiceImpl implements PostService {
 	FeedRestRepository feedRestRepository;
 	
 	@Override
+	@HystrixCommand
 	public Post addPost(Long userId, String title, String content) {
 		Post newPost = new Post(userId, title, content);
 		
@@ -47,6 +48,7 @@ public class PostServiceImpl implements PostService {
 	}
 
 	@Override
+	@HystrixCommand
 	public Post getPost(Long id) {
 		Optional<Post> result = postRepository.findById(id);
 		
@@ -68,6 +70,7 @@ public class PostServiceImpl implements PostService {
 	}
 
 	@Override
+	@HystrixCommand
 	public List<Post> getPostListByUserId(Long userId) {
 		List<Post> postList = postRepository.findAllByUserId(userId);
 		

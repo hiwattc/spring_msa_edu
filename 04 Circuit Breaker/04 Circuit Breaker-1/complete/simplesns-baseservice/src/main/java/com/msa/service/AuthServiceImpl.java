@@ -9,6 +9,7 @@ import com.msa.domain.AuthToken;
 import com.msa.domain.User;
 import com.msa.repository.AuthTokenRepository;
 import com.msa.repository.UserRepository;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @Service
 public class AuthServiceImpl implements AuthService {
@@ -20,6 +21,7 @@ public class AuthServiceImpl implements AuthService {
 	UserRepository userRepository;
 	
 	@Override
+	@HystrixCommand
 	public AuthToken generateAuthToken(String username, String password) {
 		User user = userRepository.findByUsernameAndPassword(username, password);
 		
@@ -35,6 +37,7 @@ public class AuthServiceImpl implements AuthService {
 	}
 
 	@Override
+	@HystrixCommand
 	public AuthToken getAuthToken(String token) {
 		Optional<AuthToken> result = authTokenRepository.findById(token);
 		AuthToken authToken = null;
@@ -48,6 +51,7 @@ public class AuthServiceImpl implements AuthService {
 
 	// bad unused
 	@Override
+	@HystrixCommand
 	public void deleteAuthToken(Long userId) {
 		authTokenRepository.deleteByUserId(userId);
 	}
