@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="F:\SPRING_MSA_EDU\workspace\06 Distributed Tracing Pattern\07 Distributed Tracing Pattern\complete"/>
+			<item value="F:\SPRING_MSA_EDU\workspace\04 Circuit Breaker\04 Circuit Breaker-1\complete"/>
 			<item value="F:\SPRING_MSA_EDU\workspace\05 API Gateway\05 API Gateway\complete"/>
 			<item value="F:\SPRING_MSA_EDU\workspace\02 Service Discovery\02 Service Discovery\complete"/>
 			<item value="F:\SPRING_MSA_EDU\workspace\01 MSA Decomposition\01 MSA Decomposition\complete"/>
